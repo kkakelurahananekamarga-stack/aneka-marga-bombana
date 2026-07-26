@@ -7,7 +7,6 @@ const SERVICE_ICONS: Record<string, string> = {
     'domisili': '📍',
     'usaha': '🏪',
     'mampu': '📋',
-    'mampu': '📋',
     'pindah': '🔄',
     'ktp': '🪪',
     'kartu keluarga': '👨‍👩‍👧',
