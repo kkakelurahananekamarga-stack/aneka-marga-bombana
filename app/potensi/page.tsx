@@ -44,14 +44,12 @@ export default async function PotensiPage() {
                 badge="Potensi Lokal"
             />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="text-center mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+                <div className="text-center mb-8">
+                    <h2 className="text-xl sm:text-3xl font-bold text-gray-800 mb-2">
                         Potensi Desa Aneka Marga
                     </h2>
-                    <p className="text-gray-500">
-                        Jelajahi beragam potensi yang dimiliki Desa Aneka Marga
-                    </p>
+                    <p className="text-gray-500 text-sm">Jelajahi beragam potensi yang dimiliki Desa Aneka Marga</p>
                 </div>
 
                 {potentials.length === 0 ? (

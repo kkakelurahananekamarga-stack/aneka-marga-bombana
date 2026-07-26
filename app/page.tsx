@@ -141,7 +141,7 @@ export default async function HomePage() {
             />
 
             {/* Ringkasan Desa */}
-            <section className="py-12 bg-white">
+            <section className="py-10 sm:py-12 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
                         Tentang Desa Aneka Marga
@@ -186,25 +186,25 @@ export default async function HomePage() {
             </section>
 
             {/* Grid Navigasi Menu Utama */}
-            <section className="py-12 bg-gray-50">
+            <section className="py-10 sm:py-12 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-2">
+                    <h2 className="text-xl sm:text-3xl font-bold text-gray-800 text-center mb-2">
                         Jelajahi Desa Aneka Marga
                     </h2>
-                    <p className="text-gray-500 text-center mb-8">Temukan berbagai informasi desa melalui menu di bawah ini</p>
+                    <p className="text-gray-500 text-center text-sm mb-6 sm:mb-8">Temukan berbagai informasi desa melalui menu di bawah ini</p>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                         {navMenu.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="group bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md hover:border-desa-200 transition-all flex flex-col items-center text-center gap-3"
+                                className="group bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100 hover:shadow-md hover:border-desa-200 transition-all flex flex-col items-center text-center gap-2 sm:gap-3"
                             >
-                                <div className="w-14 h-14 rounded-full bg-desa-50 group-hover:bg-desa-100 flex items-center justify-center text-desa-600 transition-colors">
+                                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-desa-50 group-hover:bg-desa-100 flex items-center justify-center text-desa-600 transition-colors">
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <p className="font-semibold text-gray-800 text-sm group-hover:text-desa-600 transition-colors">
+                                    <p className="font-semibold text-gray-800 text-xs sm:text-sm group-hover:text-desa-600 transition-colors">
                                         {item.label}
                                     </p>
                                     <p className="text-xs text-gray-500 mt-0.5 leading-snug hidden sm:block">

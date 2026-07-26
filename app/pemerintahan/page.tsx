@@ -59,7 +59,7 @@ export default async function PemerintahanPage() {
         <div className="bg-gray-50 min-h-screen">
 
             {/* ── HEADER SECTION ── */}
-            <section className="bg-white pt-16 pb-12 text-center px-4">
+            <section className="bg-white pt-10 sm:pt-16 pb-8 sm:pb-12 text-center px-4">
                 <span className="inline-block bg-desa-100 text-desa-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-5">
                     Transparansi Publik
                 </span>
@@ -73,7 +73,7 @@ export default async function PemerintahanPage() {
             </section>
 
             {/* ── KEPALA DESA ── */}
-            <section className="pb-0 px-4">
+            <section className="py-10 pb-14 px-4">
                 <div className="max-w-xs mx-auto">
                     {kepalaDesa ? (
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col items-center text-center">
@@ -108,9 +108,9 @@ export default async function PemerintahanPage() {
 
             {/* ── PERANGKAT DESA ── */}
             {perangkat.length > 0 && (
-                <section className="pb-16 px-4">
+                <section className="pb-10 px-4">
                     <div className="max-w-5xl mx-auto">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                             {perangkat.map((official) => (
                                 <div
                                     key={official.id}
@@ -130,7 +130,7 @@ export default async function PemerintahanPage() {
 
             {/* ── VISI & HUBUNGI ── */}
             <section className="py-10 px-4 bg-white">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
 
                     {/* Visi card */}
                     <div className="rounded-2xl overflow-hidden flex flex-col sm:flex-row shadow-sm border border-gray-100">
@@ -197,8 +197,8 @@ export default async function PemerintahanPage() {
             </section>
 
             {/* ── STATISTIK ── */}
-            <section className="py-16 bg-gray-50 px-4">
-                <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            <section className="py-8 sm:py-16 bg-gray-50 px-4">
+                <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
                     {[
                         { value: '±1.500', label: 'Total Penduduk' },
                         { value: String(officials.length || 8), label: 'Perangkat Desa' },
@@ -206,8 +206,8 @@ export default async function PemerintahanPage() {
                         { value: '98%', label: 'Kepuasan Layanan' },
                     ].map((stat) => (
                         <div key={stat.label}>
-                            <p className="text-3xl sm:text-4xl font-extrabold text-desa-700">{stat.value}</p>
-                            <p className="text-gray-500 text-sm mt-2">{stat.label}</p>
+                            <p className="text-2xl sm:text-4xl font-extrabold text-desa-700">{stat.value}</p>
+                            <p className="text-gray-500 text-xs sm:text-sm mt-1">{stat.label}</p>
                         </div>
                     ))}
                 </div>

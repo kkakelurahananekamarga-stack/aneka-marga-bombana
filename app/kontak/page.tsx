@@ -43,18 +43,16 @@ export default async function KontakPage() {
                 imageSrc="/hero-desa.png"
             />
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="text-center mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+                <div className="text-center mb-8">
+                    <h2 className="text-xl sm:text-3xl font-bold text-gray-800 mb-2">
                         Informasi Kontak
                     </h2>
-                    <p className="text-gray-500">
-                        Kami siap melayani Anda
-                    </p>
+                    <p className="text-gray-500 text-sm">Kami siap melayani Anda</p>
                 </div>
 
                 {contact ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         {/* Telepon */}
                         {contact.telepon && (
                             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex items-start gap-4">

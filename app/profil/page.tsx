@@ -57,9 +57,9 @@ export default async function ProfilPage() {
             />
 
             {/* ── SEJARAH + GEOGRAFIS ── */}
-            <section className="py-16">
+            <section className="py-10 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                         {/* Kiri: Sejarah */}
                         <div className="lg:col-span-2">
@@ -79,17 +79,17 @@ export default async function ProfilPage() {
                             </div>
 
                             {/* Stats */}
-                            <div className="mt-8 grid grid-cols-3 gap-4">
-                                <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                                    <p className="text-2xl font-extrabold text-desa-700">1978</p>
+                            <div className="mt-8 grid grid-cols-3 gap-3">
+                                <div className="text-center p-3 bg-gray-50 rounded-2xl">
+                                    <p className="text-xl font-extrabold text-desa-700">1978</p>
                                     <p className="text-xs text-gray-500 mt-1">Tahun Berdiri</p>
                                 </div>
-                                <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                                    <p className="text-2xl font-extrabold text-desa-700">45+</p>
+                                <div className="text-center p-3 bg-gray-50 rounded-2xl">
+                                    <p className="text-xl font-extrabold text-desa-700">45+</p>
                                     <p className="text-xs text-gray-500 mt-1">Pengalaman</p>
                                 </div>
-                                <div className="text-center p-4 bg-gray-50 rounded-2xl">
-                                    <p className="text-2xl font-extrabold text-desa-700">8+</p>
+                                <div className="text-center p-3 bg-gray-50 rounded-2xl">
+                                    <p className="text-xl font-extrabold text-desa-700">8+</p>
                                     <p className="text-xs text-gray-500 mt-1">Perangkat Desa</p>
                                 </div>
                             </div>
@@ -135,14 +135,14 @@ export default async function ProfilPage() {
             </section>
 
             {/* ── VISI & MISI ── */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-10 sm:py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Visi &amp; Misi</h2>
                         <div className="mt-2 w-12 h-1 bg-desa-600 rounded-full mx-auto" />
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Visi & Misi teks */}
                         <div className="space-y-8">
                             {/* Visi */}
@@ -213,7 +213,7 @@ export default async function ProfilPage() {
             </section>
 
             {/* ── DEMOGRAFI ── */}
-            <section className="py-16">
+            <section className="py-10 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
                         <div>
