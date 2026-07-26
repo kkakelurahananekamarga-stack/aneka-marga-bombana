@@ -4,7 +4,7 @@ import PotentialFilter from '@/components/public/PotentialFilter'
 import { createClient } from '@/lib/supabase/server'
 import type { Potential } from '@/types'
 
-export const revalidate = 86400
+export const revalidate = 0
 
 export const metadata: Metadata = {
     title: 'Potensi Desa',

@@ -3,7 +3,7 @@ import LayananList from '@/components/public/LayananList'
 import { createClient } from '@/lib/supabase/server'
 import type { Service } from '@/types'
 
-export const revalidate = 86400
+export const revalidate = 0
 
 export const metadata: Metadata = {
     title: 'Layanan Administrasi',

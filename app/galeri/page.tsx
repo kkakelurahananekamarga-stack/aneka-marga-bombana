@@ -4,7 +4,7 @@ import GalleryGrid from '@/components/public/GalleryGrid'
 import { createClient } from '@/lib/supabase/server'
 import type { GalleryItem } from '@/types'
 
-export const revalidate = 3600
+export const revalidate = 0
 
 export const metadata: Metadata = {
     title: 'Galeri Foto',

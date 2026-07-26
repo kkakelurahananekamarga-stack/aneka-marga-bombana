@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import { sortNewsByDate } from '@/lib/utils'
 import type { News } from '@/types'
 
-export const revalidate = 3600
+export const revalidate = 0
 
 export const metadata: Metadata = {
     title: 'Berita Desa',

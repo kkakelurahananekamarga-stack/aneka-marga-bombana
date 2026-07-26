@@ -3,7 +3,7 @@ import HeroSection from '@/components/public/HeroSection'
 import { createClient } from '@/lib/supabase/server'
 import type { Profile } from '@/types'
 
-export const revalidate = 86400
+export const revalidate = 0
 
 export const metadata: Metadata = {
     title: 'Profil Desa',
