@@ -73,21 +73,12 @@ export default async function PemerintahanPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-desa-900 via-desa-700 to-emerald-500" />
                 {/* Overlay gradasi warna emas di kanan */}
                 <div className="absolute inset-0 bg-gradient-to-l from-amber-700/30 via-transparent to-transparent" />
-                {/* Motif Sosoronga SVG samar */}
-                <div className="absolute inset-0 opacity-[0.1]"
+                {/* Pattern diamond warna khas Bombana */}
+                <div className="absolute inset-0 opacity-[0.08]"
                     style={{
-                        backgroundImage: `url('/motif-sosoronga.svg')`,
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: '200px 220px',
-                    }}
-                />
-                {/* Motif Bosu-Bosu di bagian bawah hero */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 opacity-[0.15]"
-                    style={{
-                        backgroundImage: `url('/motif-burisininta.svg')`,
-                        backgroundRepeat: 'repeat-x',
-                        backgroundSize: '100px 100px',
-                        backgroundPosition: 'bottom',
+                        backgroundImage: `linear-gradient(45deg, #F5C200 25%, transparent 25%), linear-gradient(-45deg, #F5C200 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #1B3A8C 75%), linear-gradient(-45deg, transparent 75%, #1B3A8C 75%)`,
+                        backgroundSize: '20px 20px',
+                        backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
                     }}
                 />
 
@@ -128,11 +119,11 @@ export default async function PemerintahanPage() {
                 <section className="relative overflow-hidden py-14 px-4">
                     {/* Background gradasi Burisininta */}
                     <div className="absolute inset-0 bg-gradient-to-b from-desa-800 to-desa-900" />
-                    <div className="absolute inset-0 opacity-[0.1]"
+                    <div className="absolute inset-0 opacity-[0.08]"
                         style={{
-                            backgroundImage: `url('/motif-burisininta.svg')`,
-                            backgroundRepeat: 'repeat',
-                            backgroundSize: '100px 200px',
+                            backgroundImage: `linear-gradient(45deg, white 25%, transparent 25%), linear-gradient(-45deg, white 25%, transparent 25%), linear-gradient(45deg, transparent 75%, white 75%), linear-gradient(-45deg, transparent 75%, white 75%)`,
+                            backgroundSize: '16px 16px',
+                            backgroundPosition: '0 0, 0 8px, 8px -8px, -8px 0px',
                         }}
                     />
                     <div className="relative max-w-2xl mx-auto">
@@ -273,11 +264,11 @@ export default async function PemerintahanPage() {
                     </div>
                     <div className="relative overflow-hidden rounded-3xl p-6 flex flex-col justify-between shadow-md">
                         <div className="absolute inset-0 bg-gradient-to-br from-desa-800 via-desa-700 to-teal-700" />
-                        <div className="absolute inset-0 opacity-[0.1]"
+                        <div className="absolute inset-0 opacity-[0.08]"
                             style={{
-                                backgroundImage: `url('/motif-sosoronga.svg')`,
-                                backgroundRepeat: 'repeat',
-                                backgroundSize: '200px 220px',
+                                backgroundImage: `linear-gradient(45deg, white 25%, transparent 25%), linear-gradient(-45deg, white 25%, transparent 25%), linear-gradient(45deg, transparent 75%, white 75%), linear-gradient(-45deg, transparent 75%, white 75%)`,
+                                backgroundSize: '16px 16px',
+                                backgroundPosition: '0 0, 0 8px, 8px -8px, -8px 0px',
                             }}
                         />
                         <div className="relative">
