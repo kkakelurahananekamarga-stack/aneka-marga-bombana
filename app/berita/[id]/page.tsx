@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: BeritaDetailPageProps): Promi
         title: article.judul,
         description: article.isi.slice(0, 160),
         openGraph: {
-            title: `${article.judul} — Desa Aneka Marga`,
+            title: `${article.judul} — Kelurahan Aneka Marga`,
             description: article.isi.slice(0, 160),
             images: article.gambar ? [{ url: article.gambar }] : ['/og-default.jpg'],
             type: 'article',

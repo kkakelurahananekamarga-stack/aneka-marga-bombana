@@ -6,8 +6,8 @@ import type { Umkm } from '@/types'
 export const revalidate = 0
 
 export const metadata: Metadata = {
-    title: 'UMKM Desa',
-    description: 'Daftar Usaha Mikro, Kecil, dan Menengah (UMKM) milik warga Desa Aneka Marga.',
+    title: 'UMKM Kelurahan',
+    description: 'Daftar Usaha Mikro, Kecil, dan Menengah (UMKM) milik warga Kelurahan Aneka Marga.',
 }
 
 async function getUmkm(): Promise<Umkm[]> {
@@ -37,10 +37,10 @@ export default async function UmkmPage() {
                         Katalog Produk Lokal
                     </span>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 max-w-xl leading-tight">
-                        Berdayakan UMKM Desa Aneka Marga
+                        Berdayakan UMKM Kelurahan Aneka Marga
                     </h1>
                     <p className="text-gray-500 max-w-lg leading-relaxed">
-                        Temukan produk-produk unggulan karya warga desa, mulai dari hasil tani segar hingga kerajinan tangan estetik yang dibuat dengan cinta.
+                        Temukan produk-produk unggulan karya warga kelurahan, mulai dari hasil tani segar hingga kerajinan tangan estetik yang dibuat dengan cinta.
                     </p>
                 </div>
             </section>

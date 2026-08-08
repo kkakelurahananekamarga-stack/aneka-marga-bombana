@@ -9,10 +9,10 @@ export const revalidate = 0
 export const metadata: Metadata = {
     title: 'Galeri Foto',
     description:
-        'Galeri foto dokumentasi kegiatan, pembangunan, dan kehidupan masyarakat Desa Aneka Marga.',
+        'Galeri foto dokumentasi kegiatan, pembangunan, dan kehidupan masyarakat Kelurahan Aneka Marga.',
     openGraph: {
-        title: 'Galeri Foto — Desa Aneka Marga',
-        description: 'Dokumentasi foto kegiatan dan perkembangan Desa Aneka Marga.',
+        title: 'Galeri Foto — Kelurahan Aneka Marga',
+        description: 'Dokumentasi foto kegiatan dan perkembangan Kelurahan Aneka Marga.',
         images: ['/og-default.jpg'],
     },
 }
@@ -39,14 +39,14 @@ export default async function GaleriPage() {
         <div>
             <HeroSection
                 title="Galeri Foto"
-                subtitle="Dokumentasi kegiatan dan perkembangan Desa Aneka Marga"
+                subtitle="Dokumentasi kegiatan dan perkembangan Kelurahan Aneka Marga"
                 imageSrc="/hero-desa.png"
             />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
                 <div className="text-center mb-8">
                     <h2 className="text-xl sm:text-3xl font-bold text-gray-800 mb-2">
-                        Galeri Desa Aneka Marga
+                        Galeri Kelurahan Aneka Marga
                     </h2>
                     <p className="text-gray-500 text-sm">Klik foto untuk melihat dalam ukuran penuh</p>
                 </div>

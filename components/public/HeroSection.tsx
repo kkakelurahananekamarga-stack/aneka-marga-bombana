@@ -39,7 +39,7 @@ export default function HeroSection({ title, subtitle, imageSrc, badge }: HeroSe
                     {/* Badge */}
                     <div className="mb-4">
                         <span className="inline-block bg-desa-500/80 backdrop-blur-sm text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
-                            {badge ?? 'Desa Aneka Marga'}
+                            {badge ?? 'Kelurahan Aneka Marga'}
                         </span>
                     </div>
 

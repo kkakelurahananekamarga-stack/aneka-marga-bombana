@@ -12,15 +12,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     title: {
-        template: '%s — Desa Aneka Marga',
-        default: 'Desa Aneka Marga — Kecamatan Rarowatu Utara, Kabupaten Bombana',
+        template: '%s — Kelurahan Aneka Marga',
+        default: 'Kelurahan Aneka Marga — Kecamatan Rarowatu Utara, Kabupaten Bombana',
     },
     description:
-        'Website resmi Desa Aneka Marga, Kecamatan Rarowatu Utara, Kabupaten Bombana, Sulawesi Tenggara. Informasi profil desa, pemerintahan, potensi, UMKM, layanan, berita, dan galeri.',
+        'Website resmi Kelurahan Aneka Marga, Kecamatan Rarowatu Utara, Kabupaten Bombana, Sulawesi Tenggara. Informasi profil kelurahan, pemerintahan, potensi, UMKM, layanan, berita, dan galeri.',
     openGraph: {
-        title: 'Desa Aneka Marga',
+        title: 'Kelurahan Aneka Marga',
         description:
-            'Website resmi Desa Aneka Marga, Kecamatan Rarowatu Utara, Kabupaten Bombana, Sulawesi Tenggara.',
+            'Website resmi Kelurahan Aneka Marga, Kecamatan Rarowatu Utara, Kabupaten Bombana, Sulawesi Tenggara.',
         locale: 'id_ID',
         type: 'website',
     },

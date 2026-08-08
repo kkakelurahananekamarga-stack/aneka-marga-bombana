@@ -8,12 +8,12 @@ import type { News } from '@/types'
 export const revalidate = 0
 
 export const metadata: Metadata = {
-    title: 'Berita Desa',
+    title: 'Berita Kelurahan',
     description:
-        'Berita dan informasi terbaru tentang kegiatan dan perkembangan Desa Aneka Marga.',
+        'Berita dan informasi terbaru tentang kegiatan dan perkembangan Kelurahan Aneka Marga.',
     openGraph: {
-        title: 'Berita Desa — Desa Aneka Marga',
-        description: 'Berita dan informasi terbaru Desa Aneka Marga.',
+        title: 'Berita Kelurahan — Kelurahan Aneka Marga',
+        description: 'Berita dan informasi terbaru Kelurahan Aneka Marga.',
         images: ['/og-default.jpg'],
     },
 }
@@ -39,8 +39,8 @@ export default async function BeritaPage() {
     return (
         <div>
             <HeroSection
-                title="Berita Desa"
-                subtitle="Informasi dan kegiatan terbaru Desa Aneka Marga"
+                title="Berita Kelurahan"
+                subtitle="Informasi dan kegiatan terbaru Kelurahan Aneka Marga"
                 imageSrc="/hero-desa.png"
                 badge="Berita Terkini"
             />
@@ -50,7 +50,7 @@ export default async function BeritaPage() {
                     <h2 className="text-xl sm:text-3xl font-bold text-gray-800 mb-2">
                         Berita Terkini
                     </h2>
-                    <p className="text-gray-500 text-sm">Ikuti perkembangan dan kegiatan Desa Aneka Marga</p>
+                    <p className="text-gray-500 text-sm">Ikuti perkembangan dan kegiatan Kelurahan Aneka Marga</p>
                 </div>
 
                 {newsList.length === 0 ? (

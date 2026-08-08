@@ -8,10 +8,10 @@ export const revalidate = 0
 export const metadata: Metadata = {
     title: 'Kontak',
     description:
-        'Informasi kontak Desa Aneka Marga: nomor telepon, email, alamat kantor desa, jam pelayanan, dan peta lokasi.',
+        'Informasi kontak Kelurahan Aneka Marga: nomor telepon, email, alamat kantor kelurahan, jam pelayanan, dan peta lokasi.',
     openGraph: {
-        title: 'Kontak — Desa Aneka Marga',
-        description: 'Hubungi atau kunjungi Kantor Desa Aneka Marga.',
+        title: 'Kontak — Kelurahan Aneka Marga',
+        description: 'Hubungi atau kunjungi Kantor Kelurahan Aneka Marga.',
         images: ['/og-default.jpg'],
     },
 }
@@ -39,7 +39,7 @@ export default async function KontakPage() {
         <div>
             <HeroSection
                 title="Kontak"
-                subtitle="Hubungi atau kunjungi Kantor Desa Aneka Marga"
+                subtitle="Hubungi atau kunjungi Kantor Kelurahan Aneka Marga"
                 imageSrc="/hero-desa.png"
             />
 
@@ -133,7 +133,7 @@ export default async function KontakPage() {
                 {/* Google Maps Embed */}
                 {contact?.maps && (
                     <section>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4">Lokasi Kantor Desa</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">Lokasi Kantor Kelurahan</h3>
                         <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 aspect-video">
                             <iframe
                                 src={contact.maps}
@@ -143,7 +143,7 @@ export default async function KontakPage() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="Lokasi Kantor Desa Aneka Marga di Google Maps"
+                                title="Lokasi Kantor Kelurahan Aneka Marga di Google Maps"
                                 className="w-full h-full"
                             />
                         </div>

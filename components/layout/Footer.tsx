@@ -26,7 +26,7 @@ export default function Footer() {
                             <div className="w-8 h-8 bg-desa-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-xs font-bold">AM</span>
                             </div>
-                            <span className="font-bold text-base">Desa Aneka Marga</span>
+                            <span className="font-bold text-base">Kelurahan Aneka Marga</span>
                         </div>
                         <p className="text-desa-300 text-sm leading-relaxed">
                             Kecamatan Rarowatu Utara<br />
@@ -73,7 +73,7 @@ export default function Footer() {
                             <div className="w-7 h-7 bg-desa-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <span className="text-white text-xs font-bold">AM</span>
                             </div>
-                            <span className="font-bold text-sm">Desa Aneka Marga</span>
+                            <span className="font-bold text-sm">Kelurahan Aneka Marga</span>
                         </div>
                         <div className="flex gap-2">
                             <a href="#" aria-label="Facebook" className="w-8 h-8 bg-desa-700 rounded-lg flex items-center justify-center">
@@ -105,7 +105,7 @@ export default function Footer() {
                 {/* Copyright — semua ukuran */}
                 <div className="border-t border-desa-700 mt-4 sm:mt-8 pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-center sm:text-left">
                     <p className="text-desa-400 text-xs">
-                        &copy; {currentYear} Desa Aneka Marga, Kab. Bombana. Hak cipta dilindungi.
+                        &copy; {currentYear} Kelurahan Aneka Marga, Kab. Bombana. Hak cipta dilindungi.
                     </p>
                     <p className="text-desa-500 text-xs">Dibuat dalam rangka Proker KKA UMKendari Kelompok 16 </p>
                 </div>

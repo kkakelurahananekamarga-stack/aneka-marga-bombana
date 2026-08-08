@@ -6,16 +6,16 @@ import type { Profile } from '@/types'
 export const revalidate = 0
 
 export const metadata: Metadata = {
-    title: 'Profil Desa',
+    title: 'Profil Kelurahan',
     description:
-        'Profil lengkap Desa Aneka Marga meliputi sejarah, visi, misi, letak geografis, luas wilayah, dan jumlah penduduk.',
+        'Profil lengkap Kelurahan Aneka Marga meliputi sejarah, visi, misi, letak geografis, luas wilayah, dan jumlah penduduk.',
 }
 
 const placeholderProfile: Profile = {
     id: 'placeholder',
     sejarah:
-        'Terbentuk pada tahun 1978 sebagai kawasan transmigrasi, Desa Aneka Marga memiliki latar belakang yang beragam. Bermula dari sekelompok gotong royong antar suku yang berbeda, desa ini bertransformasi dari sekadar lahan pertanian menjadi pusat provisi lokal di wilayahnya.\n\nNama "Aneka Marga" sendiri melambangkan pertemuan dari berbagai jalan hidup yang bersatu untuk membangun satu visi yang sama: kesejahteraan bersama yang berlandaskan nilai-nilai luhur Pancasila dan adat setempat.',
-    visi: 'Mewujudkan Desa Aneka Marga yang Mandiri, Sejahtera, dan Digital berlandaskan Iman dan Taqwa di Tahun 2029.',
+        'Terbentuk pada tahun 1978 sebagai kawasan transmigrasi, Kelurahan Aneka Marga memiliki latar belakang yang beragam. Bermula dari sekelompok gotong royong antar suku yang berbeda, kelurahan ini bertransformasi dari sekadar lahan pertanian menjadi pusat provisi lokal di wilayahnya.\n\nNama "Aneka Marga" sendiri melambangkan pertemuan dari berbagai jalan hidup yang bersatu untuk membangun satu visi yang sama: kesejahteraan bersama yang berlandaskan nilai-nilai luhur Pancasila dan adat setempat.',
+    visi: 'Mewujudkan Kelurahan Aneka Marga yang Mandiri, Sejahtera, dan Digital berlandaskan Iman dan Taqwa di Tahun 2029.',
     misi:
         'Meningkatkan kualitas sumber daya manusia melalui program pendidikan dan kesehatan desa yang inklusif.\nOptimalisasi pengelolaan potensi pertanian dan perkebunan berbasis teknologi ramah lingkungan.\nTransformasi tata kelola pemerintahan desa melalui layanan administrasi berbasis digital yang transparan.',
     geografis:
@@ -50,10 +50,10 @@ export default async function ProfilPage() {
     return (
         <div className="bg-white">
             <HeroSection
-                title="Menuju Kemandirian & Digitalisasi Desa"
+                title="Menuju Kemandirian & Digitalisasi Kelurahan"
                 subtitle="Dedikasi kami untuk membangun Aneka Marga yang harmonis, produktif, dan siap menyongsong masa depan teknologi."
                 imageSrc="/hero-desa.png"
-                badge="Profil Desa"
+                badge="Profil Kelurahan"
             />
 
             {/* ── SEJARAH + GEOGRAFIS ── */}
@@ -90,7 +90,7 @@ export default async function ProfilPage() {
                                 </div>
                                 <div className="text-center p-3 bg-gray-50 rounded-2xl">
                                     <p className="text-xl font-extrabold text-desa-700">8+</p>
-                                    <p className="text-xs text-gray-500 mt-1">Perangkat Desa</p>
+                                    <p className="text-xs text-gray-500 mt-1">Perangkat Kelurahan</p>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@ export default async function ProfilPage() {
                                 </div>
                                 <div>
                                     <p className="text-xs text-gray-500">Status</p>
-                                    <p className="text-sm font-bold text-gray-800">Desa Berkembang</p>
+                                    <p className="text-sm font-bold text-gray-800">Kelurahan Berkembang</p>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@ export default async function ProfilPage() {
                         <div>
                             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Demografi Penduduk</h2>
                             <p className="text-gray-500 mt-1 text-sm">
-                                Data kependudukan untuk memastikan ketetapan sasaran pembangunan dan layanan sosial desa.
+                                Data kependudukan untuk memastikan ketetapan sasaran pembangunan dan layanan sosial kelurahan.
                             </p>
                         </div>
                         <a href="/pemerintahan" className="text-desa-600 text-sm font-semibold hover:underline whitespace-nowrap flex items-center gap-1">
