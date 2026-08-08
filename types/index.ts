@@ -14,6 +14,7 @@ export interface Official {
     jabatan: string
     foto: string | null
     urutan: number
+    kategori: string
 }
 
 export interface Potential {
