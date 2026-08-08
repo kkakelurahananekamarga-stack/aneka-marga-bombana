@@ -191,7 +191,7 @@ export default async function ProfilPage() {
                             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                                 <img
                                     src="/hero-desa.png"
-                                    alt="Desa Aneka Marga"
+                                    alt="Kelurahan Aneka Marga"
                                     className="w-full h-full object-cover"
                                 />
                             </div>

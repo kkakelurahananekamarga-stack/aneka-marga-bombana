@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation'
 
 const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/profil', label: 'Profil Desa' },
+    { href: '/profil', label: 'Profil Kelurahan' },
     { href: '/pemerintahan', label: 'Pemerintahan' },
-    { href: '/potensi', label: 'Potensi Desa' },
+    { href: '/potensi', label: 'Potensi Kelurahan' },
     { href: '/umkm', label: 'UMKM' },
     { href: '/layanan', label: 'Layanan' },
     { href: '/berita', label: 'Berita' },
@@ -35,7 +35,7 @@ export default function Navbar() {
                             <span className="text-white text-xs font-bold">AM</span>
                         </div>
                         <span className="font-bold text-desa-700 text-sm sm:text-base leading-tight">
-                            Desa Aneka Marga
+                            Kelurahan Aneka Marga
                         </span>
                     </Link>
 
@@ -46,8 +46,8 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive(link.href)
-                                        ? 'bg-desa-100 text-desa-700 font-semibold'
-                                        : 'text-gray-600 hover:text-desa-600 hover:bg-desa-50'
+                                    ? 'bg-desa-100 text-desa-700 font-semibold'
+                                    : 'text-gray-600 hover:text-desa-600 hover:bg-desa-50'
                                     }`}
                             >
                                 {link.label}
@@ -88,8 +88,8 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(link.href)
-                                        ? 'bg-desa-100 text-desa-700 font-semibold'
-                                        : 'text-gray-600 hover:text-desa-600 hover:bg-desa-50'
+                                    ? 'bg-desa-100 text-desa-700 font-semibold'
+                                    : 'text-gray-600 hover:text-desa-600 hover:bg-desa-50'
                                     }`}
                                 onClick={() => setIsOpen(false)}
                             >
