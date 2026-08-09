@@ -84,24 +84,3 @@
         text-wrap: balance;
     }
 }
-
-/* Background halaman */
-.motif-bg {
-    position: relative;
-}
-
-.motif-bg>* {
-    position: relative;
-    z-index: 1;
-}
-
-/* Footer */
-.motif-footer {
-    position: relative;
-    overflow: hidden;
-}
-
-.motif-footer>* {
-    position: relative;
-    z-index: 1;
-}

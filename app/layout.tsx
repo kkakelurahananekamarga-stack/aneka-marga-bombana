@@ -35,7 +35,7 @@ export default function RootLayout({
         <html lang="id" className={inter.variable}>
             <body className="min-h-screen flex flex-col font-sans antialiased">
                 <Navbar />
-                <main className="flex-1 motif-bg">{children}</main>
+                <main className="flex-1">{children}</main>
                 <Footer />
             </body>
         </html>
