@@ -87,11 +87,18 @@
 
 /* ═══════════════════════════════════════════════════════════
    MOTIF TO MORONENE — BOMBANA
-   Pattern CSS geometris terinspirasi warna khas To Moronene
+   SVG pattern terinspirasi motif ukiran To Moronene
    Warna: kuning #F5C200, biru #1B3A8C, merah #E8184A
    ═══════════════════════════════════════════════════════════ */
 
-/* Background halaman: pola diamond tipis */
+/* SVG motif To Moronene sebagai CSS custom property */
+:root {
+    --motif-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3C!-- Bintang 4 sudut di tengah --%3E%3Cpolygon points='80,58 86,74 102,74 89,84 94,100 80,91 66,100 71,84 58,74 74,74' fill='%23E8184A' opacity='0.9'/%3E%3C!-- Hati besar atas (kuning outline) --%3E%3Cpath d='M80,72 C80,72 60,55 55,42 C50,29 62,20 72,28 C75,30 78,34 80,38 C82,34 85,30 88,28 C98,20 110,29 105,42 C100,55 80,72 80,72Z' fill='none' stroke='%23F5C200' stroke-width='5'/%3E%3C!-- Isi hati biru --%3E%3Cpath d='M80,69 C80,69 63,54 58,43 C54,33 63,25 72,32 C75,34 78,37 80,41 C82,37 85,34 88,32 C97,25 106,33 102,43 C97,54 80,69 80,69Z' fill='%231B3A8C' opacity='0.85'/%3E%3C!-- Scroll kiri atas --%3E%3Cpath d='M58,40 C50,30 38,35 42,48 C44,54 52,55 55,50 C58,45 54,40 49,43' fill='none' stroke='%231B3A8C' stroke-width='4' stroke-linecap='round'/%3E%3C!-- Scroll kanan atas --%3E%3Cpath d='M102,40 C110,30 122,35 118,48 C116,54 108,55 105,50 C102,45 106,40 111,43' fill='none' stroke='%231B3A8C' stroke-width='4' stroke-linecap='round'/%3E%3C!-- Daun/wing kiri atas --%3E%3Cpath d='M55,42 C45,25 28,20 30,38 C31,48 45,50 55,42Z' fill='%231B3A8C' opacity='0.8'/%3E%3C!-- Daun/wing kanan atas --%3E%3Cpath d='M105,42 C115,25 132,20 130,38 C129,48 115,50 105,42Z' fill='%231B3A8C' opacity='0.8'/%3E%3C!-- Ornamen tengah merah --%3E%3Ccircle cx='80' cy='74' r='5' fill='%23E8184A'/%3E%3C!-- Tangkai bawah kiri --%3E%3Cpath d='M72,90 C65,98 55,95 52,105 C50,112 58,118 65,112 C68,109 68,103 65,100' fill='none' stroke='%23F5C200' stroke-width='4' stroke-linecap='round'/%3E%3C!-- Tangkai bawah kanan --%3E%3Cpath d='M88,90 C95,98 105,95 108,105 C110,112 102,118 95,112 C92,109 92,103 95,100' fill='none' stroke='%23F5C200' stroke-width='4' stroke-linecap='round'/%3E%3C!-- Scroll bawah kiri --%3E%3Cpath d='M68,95 C58,100 52,112 62,118 C68,121 74,116 72,110 C70,104 63,104 62,109' fill='none' stroke='%231B3A8C' stroke-width='3.5' stroke-linecap='round'/%3E%3C!-- Scroll bawah kanan --%3E%3Cpath d='M92,95 C102,100 108,112 98,118 C92,121 86,116 88,110 C90,104 97,104 98,109' fill='none' stroke='%231B3A8C' stroke-width='3.5' stroke-linecap='round'/%3E%3C!-- Bintang sudut bawah merah --%3E%3Cpolygon points='80,108 83,116 91,116 85,121 87,129 80,124 73,129 75,121 69,116 77,116' fill='%23E8184A' opacity='0.85'/%3E%3C!-- Aksen kuning tengah bawah --%3E%3Cpath d='M70,100 C72,108 75,112 80,114 C85,112 88,108 90,100' fill='%23F5C200' opacity='0.7'/%3E%3C!-- Wing kiri bawah --%3E%3Cpath d='M52,105 C38,108 28,122 38,132 C45,138 58,130 55,118Z' fill='%231B3A8C' opacity='0.75'/%3E%3C!-- Wing kanan bawah --%3E%3Cpath d='M108,105 C122,108 132,122 122,132 C115,138 102,130 105,118Z' fill='%231B3A8C' opacity='0.75'/%3E%3C!-- Titik aksen pojok --%3E%3Ccircle cx='30' cy='30' r='3' fill='%23E8184A' opacity='0.6'/%3E%3Ccircle cx='130' cy='30' r='3' fill='%23E8184A' opacity='0.6'/%3E%3Ccircle cx='30' cy='130' r='3' fill='%23E8184A' opacity='0.6'/%3E%3Ccircle cx='130' cy='130' r='3' fill='%23E8184A' opacity='0.6'/%3E%3C/svg%3E");
+
+    --motif-svg-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpolygon points='80,58 86,74 102,74 89,84 94,100 80,91 66,100 71,84 58,74 74,74' fill='white' opacity='0.9'/%3E%3Cpath d='M80,72 C80,72 60,55 55,42 C50,29 62,20 72,28 C75,30 78,34 80,38 C82,34 85,30 88,28 C98,20 110,29 105,42 C100,55 80,72 80,72Z' fill='none' stroke='white' stroke-width='5'/%3E%3Cpath d='M80,69 C80,69 63,54 58,43 C54,33 63,25 72,32 C75,34 78,37 80,41 C82,37 85,34 88,32 C97,25 106,33 102,43 C97,54 80,69 80,69Z' fill='white' opacity='0.6'/%3E%3Cpath d='M58,40 C50,30 38,35 42,48 C44,54 52,55 55,50 C58,45 54,40 49,43' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M102,40 C110,30 122,35 118,48 C116,54 108,55 105,50 C102,45 106,40 111,43' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M55,42 C45,25 28,20 30,38 C31,48 45,50 55,42Z' fill='white' opacity='0.7'/%3E%3Cpath d='M105,42 C115,25 132,20 130,38 C129,48 115,50 105,42Z' fill='white' opacity='0.7'/%3E%3Ccircle cx='80' cy='74' r='5' fill='white'/%3E%3Cpath d='M72,90 C65,98 55,95 52,105 C50,112 58,118 65,112 C68,109 68,103 65,100' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M88,90 C95,98 105,95 108,105 C110,112 102,118 95,112 C92,109 92,103 95,100' fill='none' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M68,95 C58,100 52,112 62,118 C68,121 74,116 72,110 C70,104 63,104 62,109' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M92,95 C102,100 108,112 98,118 C92,121 86,116 88,110 C90,104 97,104 98,109' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpolygon points='80,108 83,116 91,116 85,121 87,129 80,124 73,129 75,121 69,116 77,116' fill='white' opacity='0.85'/%3E%3Cpath d='M70,100 C72,108 75,112 80,114 C85,112 88,108 90,100' fill='white' opacity='0.5'/%3E%3Cpath d='M52,105 C38,108 28,122 38,132 C45,138 58,130 55,118Z' fill='white' opacity='0.65'/%3E%3Cpath d='M108,105 C122,108 132,122 122,132 C115,138 102,130 105,118Z' fill='white' opacity='0.65'/%3E%3Ccircle cx='30' cy='30' r='3' fill='white' opacity='0.6'/%3E%3Ccircle cx='130' cy='30' r='3' fill='white' opacity='0.6'/%3E%3Ccircle cx='30' cy='130' r='3' fill='white' opacity='0.6'/%3E%3Ccircle cx='130' cy='130' r='3' fill='white' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Background halaman */
 .motif-bg {
     position: relative;
 }
@@ -102,14 +109,10 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.07;
-    background-image:
-        linear-gradient(45deg, #1B3A8C 25%, transparent 25%),
-        linear-gradient(-45deg, #1B3A8C 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #F5C200 75%),
-        linear-gradient(-45deg, transparent 75%, #F5C200 75%);
-    background-size: 24px 24px;
-    background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+    opacity: 0.08;
+    background-image: var(--motif-svg);
+    background-size: 160px 160px;
+    background-repeat: repeat;
 }
 
 .motif-bg>* {
@@ -117,7 +120,7 @@
     z-index: 1;
 }
 
-/* Footer: pattern diamond lebih tebal di atas background gelap */
+/* Footer: motif putih di atas background gelap */
 .motif-footer {
     position: relative;
     overflow: hidden;
@@ -129,14 +132,10 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.15;
-    background-image:
-        linear-gradient(45deg, white 25%, transparent 25%),
-        linear-gradient(-45deg, white 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, white 75%),
-        linear-gradient(-45deg, transparent 75%, white 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.12;
+    background-image: var(--motif-svg-white);
+    background-size: 160px 160px;
+    background-repeat: repeat;
 }
 
 .motif-footer>* {
