@@ -85,31 +85,9 @@
     }
 }
 
-/* ═══════════════════════════════════════════════════════════
-   MOTIF TO MORONENE — BOMBANA
-   SVG pattern terinspirasi motif ukiran To Moronene
-   Warna: kuning #F5C200, biru #1B3A8C, merah #E8184A
-   ═══════════════════════════════════════════════════════════ */
-
-/* SVG motif To Moronene sebagai CSS custom property */
-/* ═══════════════════════════════════════════════
-   PATTERN — dot grid diagonal
-   ═══════════════════════════════════════════════ */
-
-/* Background halaman: dot grid hijau samar */
+/* Background halaman */
 .motif-bg {
     position: relative;
-}
-
-.motif-bg::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image: radial-gradient(circle, #15803d 1.2px, transparent 1.2px);
-    background-size: 28px 28px;
-    opacity: 0.18;
 }
 
 .motif-bg>* {
@@ -117,20 +95,10 @@
     z-index: 1;
 }
 
-/* Footer: dot putih di atas background gelap */
+/* Footer */
 .motif-footer {
     position: relative;
     overflow: hidden;
-}
-
-.motif-footer::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1.2px, transparent 1.2px);
-    background-size: 28px 28px;
 }
 
 .motif-footer>* {
