@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <!-- ===== MOTIF TO MORONENE — unit tile 320x320 ===== -->
+
+  <!-- Bintang/silang pusat atas -->
+  <polygon points="160,52 167,72 188,72 172,84 178,104 160,93 142,104 148,84 132,72 153,72" fill="#E8184A"/>
+
+  <!-- Hati besar atas — outline kuning tebal -->
+  <path d="M160,90 C160,90 128,68 120,48 C112,28 130,14 145,26 C151,31 157,38 160,46 C163,38 169,31 175,26 C190,14 208,28 200,48 C192,68 160,90 160,90Z"
+        fill="none" stroke="#F5C200" stroke-width="9" stroke-linejoin="round"/>
+  <!-- Isi hati biru -->
+  <path d="M160,85 C160,85 130,65 123,47 C117,32 132,20 146,31 C151,35 157,42 160,49 C163,42 169,35 174,31 C188,20 203,32 197,47 C190,65 160,85 160,85Z"
+        fill="#1B3A8C"/>
+
+  <!-- Scroll kiri atas -->
+  <path d="M120,48 C105,30 82,36 88,56 C91,65 103,67 109,59 C115,51 108,42 100,47"
+        fill="none" stroke="#1B3A8C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Scroll kanan atas -->
+  <path d="M200,48 C215,30 238,36 232,56 C229,65 217,67 211,59 C205,51 212,42 220,47"
+        fill="none" stroke="#1B3A8C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wing kiri atas -->
+  <path d="M120,48 C100,26 68,20 72,46 C74,60 98,64 120,48Z" fill="#1B3A8C"/>
+  <!-- Wing kanan atas -->
+  <path d="M200,48 C220,26 252,20 248,46 C246,60 222,64 200,48Z" fill="#1B3A8C"/>
+
+  <!-- Titik pusat merah -->
+  <circle cx="160" cy="88" r="9" fill="#E8184A"/>
+
+  <!-- Batang tengah ke bawah -->
+  <rect x="155" y="88" width="10" height="40" rx="5" fill="#1B3A8C"/>
+
+  <!-- Bintang/silang tengah -->
+  <polygon points="160,128 167,148 188,148 172,160 178,180 160,169 142,180 148,160 132,148 153,148" fill="#E8184A"/>
+
+  <!-- Aksen kuning kiri bawah -->
+  <path d="M140,148 C125,158 112,172 120,186 C126,196 142,192 148,180 C152,171 148,160 140,162"
+        fill="none" stroke="#F5C200" stroke-width="7" stroke-linecap="round"/>
+  <!-- Aksen kuning kanan bawah -->
+  <path d="M180,148 C195,158 208,172 200,186 C194,196 178,192 172,180 C168,171 172,160 180,162"
+        fill="none" stroke="#F5C200" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Scroll kiri bawah biru -->
+  <path d="M132,172 C112,182 104,202 118,212 C128,218 140,210 136,198 C132,188 120,190 120,200"
+        fill="none" stroke="#1B3A8C" stroke-width="6" stroke-linecap="round"/>
+  <!-- Scroll kanan bawah biru -->
+  <path d="M188,172 C208,182 216,202 202,212 C192,218 180,210 184,198 C188,188 200,190 200,200"
+        fill="none" stroke="#1B3A8C" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Wing kiri bawah -->
+  <path d="M104,202 C80,210 62,232 78,246 C90,256 112,244 108,226Z" fill="#1B3A8C"/>
+  <!-- Wing kanan bawah -->
+  <path d="M216,202 C240,210 258,232 242,246 C230,256 208,244 212,226Z" fill="#1B3A8C"/>
+
+  <!-- Bintang bawah -->
+  <polygon points="160,224 165,238 180,238 168,247 172,261 160,253 148,261 152,247 140,238 155,238" fill="#E8184A"/>
+
+  <!-- Aksen hitam kecil kiri tengah -->
+  <path d="M138,168 C130,178 128,190 136,194" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+  <!-- Aksen hitam kecil kanan tengah -->
+  <path d="M182,168 C190,178 192,190 184,194" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Titik pojok aksen -->
+  <circle cx="40" cy="40" r="5" fill="#E8184A" opacity="0.7"/>
+  <circle cx="280" cy="40" r="5" fill="#E8184A" opacity="0.7"/>
+  <circle cx="40" cy="280" r="5" fill="#E8184A" opacity="0.7"/>
+  <circle cx="280" cy="280" r="5" fill="#E8184A" opacity="0.7"/>
+</svg>
