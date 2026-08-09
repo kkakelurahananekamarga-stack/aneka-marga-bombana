@@ -108,6 +108,22 @@ const placeholderProfile: Omit<Profile, 'id'> = {
     geografis: 'Terletak di wilayah Kecamatan Rarowatu Utara, Kabupaten Bombana.',
     luas: 'Data belum tersedia',
     penduduk: null,
+    tahun_pembentukan: null,
+    dasar_hukum: null,
+    kode_pos: null,
+    tipologi: null,
+    tingkat_perkembangan: null,
+    batas_utara: null,
+    batas_selatan: null,
+    batas_barat: null,
+    batas_timur: null,
+    jarak_kecamatan: null,
+    jarak_kabupaten: null,
+    jarak_provinsi: null,
+    penduduk_laki: null,
+    penduduk_perempuan: null,
+    umr: null,
+    monografi_json: null,
 }
 
 async function getProfileData(): Promise<Partial<Profile> | null> {
