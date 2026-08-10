@@ -3,6 +3,94 @@ import Image from 'next/image'
 import { createClient } from '@/lib/supabase/server'
 import type { Official } from '@/types'
 
+/* ── Data Kelembagaan (static — bisa dipindah ke Supabase) ── */
+
+const dataLPM = {
+    nama: 'Lembaga Pemberdayaan Masyarakat (LPM)',
+    singkatan: 'LPM',
+    warna: 'blue',
+    pengurus: [
+        { jabatan: 'Pengurus', nama: 'H. Basri' },
+        { jabatan: 'Anggota', nama: 'Syadri' },
+        { jabatan: 'Anggota', nama: 'Arifuddin Ajim' },
+    ],
+}
+
+const dataTPPKK = {
+    nama: 'Tim Penggerak PKK',
+    singkatan: 'TP PKK',
+    warna: 'pink',
+    ringkasan: { pengurus: 4, anggota: 34 },
+    pengurusInti: [
+        { jabatan: 'Ketua', nama: 'Hayati' },
+        { jabatan: 'Wakil Ketua', nama: 'Dewi Hamdayani' },
+        { jabatan: 'Sekretaris', nama: 'Khoripah' },
+        { jabatan: 'Bendahara', nama: 'Murniati' },
+    ],
+    pokja: [
+        {
+            nama: 'POKJA I',
+            pengurus: [
+                { jabatan: 'Ketua', nama: 'Hayatul Almahfudho' },
+                { jabatan: 'Wakil', nama: 'Sarah' },
+                { jabatan: 'Sekretaris', nama: 'Yusmiati' },
+            ],
+            anggota: ['Windi Astuti', 'Purwati Kasmir', 'Sri Purwanti', 'Hartini', 'Mundryah'],
+        },
+        {
+            nama: 'POKJA II',
+            pengurus: [
+                { jabatan: 'Ketua', nama: 'Hariyani' },
+                { jabatan: 'Wakil', nama: 'Sitti Aisah' },
+                { jabatan: 'Sekretaris', nama: 'Dewi Ayu A.' },
+            ],
+            anggota: ['Sumiati', 'Ana Safitri', 'Sitti Khotijah', 'Marifah', 'Yenni Priyanti'],
+        },
+        {
+            nama: 'POKJA III',
+            pengurus: [
+                { jabatan: 'Ketua', nama: 'Rosmiati' },
+                { jabatan: 'Wakil', nama: 'Yuli Bt. Nasir' },
+                { jabatan: 'Sekretaris', nama: 'Nurmayana' },
+            ],
+            anggota: ['Yulia Sofianti', 'Ritna Sari', 'Nita Yanit', 'Sri Ningsih', 'Listiani', 'Umiati'],
+        },
+        {
+            nama: 'POKJA IV',
+            pengurus: [
+                { jabatan: 'Ketua', nama: 'Paina' },
+                { jabatan: 'Wakil', nama: 'M. Untari' },
+                { jabatan: 'Sekretaris', nama: 'Isni Nurhasanah' },
+            ],
+            anggota: ['Juriah', 'Ida Listiorini', 'Sitti Mudayaroh', 'Hayati', 'Murniati', 'Marniati'],
+        },
+    ],
+}
+
+const dataKarangTaruna = {
+    nama: 'Karang Taruna',
+    singkatan: 'KT',
+    warna: 'orange',
+    pengurusInti: [
+        { jabatan: 'Ketua', nama: 'Irman' },
+        { jabatan: 'Wakil Ketua', nama: 'Wahidin' },
+        { jabatan: 'Sekretaris', nama: 'Andi Musabar' },
+        { jabatan: 'Bendahara', nama: 'Samijo Anwar' },
+    ],
+    bidang: [
+        { nama: 'Pendidikan & Pelatihan', koordinator: 'Hesti Prabowo', anggota: ['Bambang Ismoso', 'Rahmad Adrina'] },
+        { nama: 'Usaha & Kesejahteraan Sosial', koordinator: 'Toni Sri Widodo', anggota: ['Abdul Jalal', 'Purwanti'] },
+        { nama: 'Kelompok Usaha Bersama', koordinator: 'Didik Dwi Prasetyo', anggota: ['Jumari', 'Abdul Yusuf'] },
+        { nama: 'Keagamaan', koordinator: 'Ahmad Khoiri Sobri', anggota: ['Rupaat', 'Arifin'] },
+        { nama: 'Olahraga & Seni Budaya', koordinator: 'Sudriman', anggota: ['Wahyu Ahsana', 'Ihwan Muamar'] },
+        { nama: 'Lingkungan Hidup', koordinator: 'Agus Nurohman', anggota: ['Ari Aji Trinugroho', 'Agus Salim'] },
+        { nama: 'Humas & Kemitraan', koordinator: 'Toni Sri Widodo', anggota: ['Arifin', 'Didik Dwi P.'] },
+        { nama: 'Pemberdayaan Perempuan', koordinator: 'Hariyani', anggota: ['Khoripah', 'Sri Ningsih'] },
+        { nama: 'Koordinasi Bola Kaki', koordinator: 'Irwan', anggota: ['Febriyanti', 'Yusuf'] },
+        { nama: 'Pendidikan & Latihan (Cadangan)', koordinator: '—', anggota: [] },
+    ],
+}
+
 export const revalidate = 0
 
 export const metadata: Metadata = {
@@ -220,6 +308,158 @@ export default async function PemerintahanPage() {
                     </div>
                 </section>
             )}
+
+            {/* ══ KELEMBAGAAN ════════════════════════════════════════════ */}
+            <section className="py-14 px-4 bg-gradient-to-b from-slate-50 to-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="text-center mb-10">
+                        <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Organisasi Kemasyarakatan</span>
+                        <h2 className="text-2xl font-extrabold text-gray-800 mt-1">Lembaga Kemasyarakatan</h2>
+                        <div className="w-10 h-0.5 bg-desa-500 mx-auto mt-3 rounded-full" />
+                    </div>
+
+                    {/* ── LPM ── */}
+                    <div className="mb-8 bg-white rounded-3xl shadow-sm border border-blue-100 overflow-hidden">
+                        <div className="bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-4 flex items-center gap-3">
+                            <span className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-extrabold text-sm">LPM</span>
+                            <div>
+                                <p className="text-white font-bold text-sm">Lembaga Pemberdayaan Masyarakat</p>
+                                <p className="text-blue-100 text-xs">Kelurahan Aneka Marga</p>
+                            </div>
+                        </div>
+                        <div className="p-6">
+                            <div className="flex flex-wrap gap-3">
+                                {dataLPM.pengurus.map((p, i) => (
+                                    <div key={i} className="flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-xl px-4 py-2">
+                                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 flex items-center justify-center flex-shrink-0">
+                                            <span className="text-white text-xs font-bold">{p.nama.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-blue-500 font-semibold">{p.jabatan}</p>
+                                            <p className="text-sm font-bold text-gray-800">{p.nama}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── TP PKK ── */}
+                    <div className="mb-8 bg-white rounded-3xl shadow-sm border border-pink-100 overflow-hidden">
+                        <div className="bg-gradient-to-r from-pink-600 to-rose-500 px-6 py-4 flex items-center justify-between flex-wrap gap-3">
+                            <div className="flex items-center gap-3">
+                                <span className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-extrabold text-xs">PKK</span>
+                                <div>
+                                    <p className="text-white font-bold text-sm">Tim Penggerak PKK</p>
+                                    <p className="text-pink-100 text-xs">Kelurahan Aneka Marga</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-3">
+                                <div className="bg-white/20 rounded-xl px-4 py-2 text-center">
+                                    <p className="text-white font-extrabold text-lg">4</p>
+                                    <p className="text-pink-100 text-xs">Pengurus</p>
+                                </div>
+                                <div className="bg-white/20 rounded-xl px-4 py-2 text-center">
+                                    <p className="text-white font-extrabold text-lg">34</p>
+                                    <p className="text-pink-100 text-xs">Anggota</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="p-6">
+                            {/* Pengurus Inti */}
+                            <p className="text-xs font-bold uppercase tracking-widest text-pink-500 mb-3">Pengurus Inti</p>
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                                {dataTPPKK.pengurusInti.map((p, i) => (
+                                    <div key={i} className="bg-pink-50 border border-pink-100 rounded-2xl p-3 text-center">
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center mx-auto mb-2">
+                                            <span className="text-white text-xs font-bold">{p.nama.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+                                        </div>
+                                        <p className="text-xs text-pink-500 font-semibold">{p.jabatan}</p>
+                                        <p className="text-xs font-bold text-gray-800 mt-0.5 leading-snug">{p.nama}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Pokja */}
+                            <p className="text-xs font-bold uppercase tracking-widest text-pink-500 mb-3">Kelompok Kerja (POKJA)</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {dataTPPKK.pokja.map((pokja, pi) => (
+                                    <div key={pi} className="border border-pink-100 rounded-2xl overflow-hidden">
+                                        <div className="bg-pink-100 px-4 py-2">
+                                            <p className="text-xs font-extrabold text-pink-700 uppercase tracking-wider">{pokja.nama}</p>
+                                        </div>
+                                        <div className="p-4 space-y-1.5">
+                                            {pokja.pengurus.map((p, i) => (
+                                                <div key={i} className="flex items-center justify-between text-xs">
+                                                    <span className="text-pink-500 font-semibold w-20 flex-shrink-0">{p.jabatan}</span>
+                                                    <span className="font-medium text-gray-700">{p.nama}</span>
+                                                </div>
+                                            ))}
+                                            {pokja.anggota.length > 0 && (
+                                                <>
+                                                    <div className="border-t border-pink-50 pt-2 mt-2">
+                                                        <p className="text-xs text-gray-400 font-semibold mb-1.5">Anggota</p>
+                                                        <div className="flex flex-wrap gap-1.5">
+                                                            {pokja.anggota.map((a, i) => (
+                                                                <span key={i} className="bg-pink-50 text-pink-700 text-xs px-2 py-0.5 rounded-full border border-pink-100">{a}</span>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── KARANG TARUNA ── */}
+                    <div className="bg-white rounded-3xl shadow-sm border border-orange-100 overflow-hidden">
+                        <div className="bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-4 flex items-center gap-3">
+                            <span className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-extrabold text-xs">KT</span>
+                            <div>
+                                <p className="text-white font-bold text-sm">Karang Taruna</p>
+                                <p className="text-orange-100 text-xs">Kelurahan Aneka Marga</p>
+                            </div>
+                        </div>
+                        <div className="p-6">
+                            {/* Pengurus Inti */}
+                            <p className="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Pengurus Inti</p>
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                                {dataKarangTaruna.pengurusInti.map((p, i) => (
+                                    <div key={i} className="bg-orange-50 border border-orange-100 rounded-2xl p-3 text-center">
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center mx-auto mb-2">
+                                            <span className="text-white text-xs font-bold">{p.nama.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+                                        </div>
+                                        <p className="text-xs text-orange-500 font-semibold">{p.jabatan}</p>
+                                        <p className="text-xs font-bold text-gray-800 mt-0.5 leading-snug">{p.nama}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            {/* Bidang */}
+                            <p className="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">Bidang Kegiatan</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {dataKarangTaruna.bidang.map((b, i) => (
+                                    <div key={i} className="border border-orange-100 rounded-2xl p-4">
+                                        <p className="text-xs font-extrabold text-orange-600 mb-2">{b.nama}</p>
+                                        <div className="flex items-start gap-1.5 text-xs mb-2">
+                                            <span className="text-orange-400 font-semibold flex-shrink-0">Koordinator:</span>
+                                            <span className="font-medium text-gray-700">{b.koordinator}</span>
+                                        </div>
+                                        {b.anggota.length > 0 && (
+                                            <div className="flex flex-wrap gap-1.5">
+                                                {b.anggota.map((a, j) => (
+                                                    <span key={j} className="bg-orange-50 text-orange-700 text-xs px-2 py-0.5 rounded-full border border-orange-100">{a}</span>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* ══ VISI & HUBUNGI ═════════════════════════════════════════ */}
             <section className="py-12 px-4 bg-white">
