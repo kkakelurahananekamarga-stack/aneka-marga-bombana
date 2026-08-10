@@ -130,25 +130,26 @@ export default async function KontakPage() {
                     </div>
                 )}
 
-                {/* Google Maps Embed */}
-                {contact?.maps && (
-                    <section>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4">Lokasi Kantor Kelurahan</h3>
-                        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 aspect-video">
-                            <iframe
-                                src={contact.maps}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Lokasi Kantor Kelurahan Aneka Marga di Google Maps"
-                                className="w-full h-full"
-                            />
-                        </div>
-                    </section>
-                )}
+                {/* Google Maps Embed — Lokasi & Batas Wilayah */}
+                <section>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">Lokasi Kelurahan Aneka Marga</h3>
+                    <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200" style={{ height: '450px' }}>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Kelurahan+Aneka+Marga,+Rarowatu+Utara,+Bombana,+Sulawesi+Tenggara&output=embed&z=14"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Lokasi Kelurahan Aneka Marga di Google Maps"
+                            className="w-full h-full"
+                        />
+                    </div>
+                    <p className="text-xs text-gray-400 mt-2 text-center">
+                        Kelurahan Aneka Marga, Kec. Rarowatu Utara, Kab. Bombana, Sulawesi Tenggara
+                    </p>
+                </section>
             </div>
         </div>
     )
