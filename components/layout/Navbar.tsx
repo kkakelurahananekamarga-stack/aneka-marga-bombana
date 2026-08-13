@@ -31,9 +31,11 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo / Branding */}
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                        <div className="w-8 h-8 bg-desa-600 rounded-full flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">AM</span>
-                        </div>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/74.06.00_SulawesiTenggara_Bombana.svg/165px-74.06.00_SulawesiTenggara_Bombana.svg.png"
+                            alt="Logo Kabupaten Bombana"
+                            className="w-8 h-8 object-contain"
+                        />
                         <span className="font-bold text-desa-700 text-sm sm:text-base leading-tight">
                             Kelurahan Aneka Marga
                         </span>
