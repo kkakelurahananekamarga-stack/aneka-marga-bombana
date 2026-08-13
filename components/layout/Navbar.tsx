@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Logo / Branding */}
                     <Link href="/" className="flex items-center gap-2 flex-shrink-0">
                         <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/74.06.00_SulawesiTenggara_Bombana.svg/165px-74.06.00_SulawesiTenggara_Bombana.svg.png"
+                            src="/logo-bombana.png"
                             alt="Logo Kabupaten Bombana"
                             className="w-8 h-8 object-contain"
                         />
