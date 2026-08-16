@@ -2,6 +2,22 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { createClient } from '@/lib/supabase/server'
 import type { Official } from '@/types'
+import PimpinanCard from '@/components/public/PimpinanModal'
+
+const dataPimpinan = [
+    {
+        nama: 'Justang Busasa',
+        jabatan: 'Lurah',
+        foto: '/lurah-justang.jpg',
+        motto: 'Melayani dengan hati, membangun dengan integritas.',
+    },
+    {
+        nama: 'Sekretaris Kelurahan',
+        jabatan: 'Sekretaris',
+        foto: '/sekretaris.jpg',
+        motto: 'Tertib administrasi, tertib pelayanan.',
+    },
+]
 
 /* ── Data Kelembagaan (static — bisa dipindah ke Supabase) ── */
 
@@ -195,40 +211,20 @@ export default async function PemerintahanPage() {
             </section>
 
             {/* ══ PIMPINAN ═══════════════════════════════════════════════ */}
-            {pimpinan.length > 0 && (
-                <section className="relative overflow-hidden py-14 px-4">
-                    {/* Background gradasi Burisininta */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-desa-800 to-desa-900" />
-                    <div className="relative max-w-2xl mx-auto">
-                        <div className="text-center mb-8">
-                            <span className="inline-block text-amber-300 text-xs font-bold uppercase tracking-widest mb-2">Pimpinan Kelurahan</span>
-                            <div className="w-12 h-0.5 bg-amber-400 mx-auto rounded-full" />
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                            {pimpinan.map((p, i) => (
-                                <div key={p.id}
-                                    className="flex-1 relative rounded-3xl overflow-hidden p-6 flex flex-col items-center text-center border border-white/10"
-                                    style={{
-                                        background: i === 0
-                                            ? 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)'
-                                            : 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)',
-                                        backdropFilter: 'blur(12px)',
-                                    }}
-                                >
-                                    {i === 0 && (
-                                        <div className="absolute top-3 right-3 bg-amber-400 text-amber-900 text-xs font-bold px-2 py-0.5 rounded-full">
-                                            Pimpinan
-                                        </div>
-                                    )}
-                                    <Avatar nama={p.nama} foto={p.foto} size={i === 0 ? 'xl' : 'lg'} light />
-                                    <h3 className="mt-4 text-base font-bold text-white">{p.nama}</h3>
-                                    <span className="mt-1 text-xs font-semibold text-amber-300 uppercase tracking-widest">{p.jabatan}</span>
-                                </div>
-                            ))}
-                        </div>
+            <section className="relative overflow-hidden py-14 px-4">
+                <div className="absolute inset-0 bg-gradient-to-b from-desa-800 to-desa-900" />
+                <div className="relative max-w-2xl mx-auto">
+                    <div className="text-center mb-8">
+                        <span className="inline-block text-amber-300 text-xs font-bold uppercase tracking-widest mb-2">Pimpinan Kelurahan</span>
+                        <div className="w-12 h-0.5 bg-amber-400 mx-auto rounded-full" />
                     </div>
-                </section>
-            )}
+                    <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                        {dataPimpinan.map((p, i) => (
+                            <PimpinanCard key={p.nama} p={p} isMain={i === 0} />
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* ══ PERANGKAT ══════════════════════════════════════════════ */}
             {perangkat.length > 0 && (
