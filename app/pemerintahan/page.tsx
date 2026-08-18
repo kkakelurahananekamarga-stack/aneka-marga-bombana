@@ -8,7 +8,7 @@ const dataPimpinan = [
     {
         nama: 'Justang Busasa',
         jabatan: 'Lurah',
-        foto: '/lurah-justang.jpg',
+        foto: '/lurah-justang.png',
         motto: 'Melayani dengan hati, membangun dengan integritas.',
     },
     {
