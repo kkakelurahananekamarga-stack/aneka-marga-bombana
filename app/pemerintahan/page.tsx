@@ -14,7 +14,7 @@ const dataPimpinan = [
     {
         nama: 'Sekretaris Kelurahan',
         jabatan: 'Sekretaris',
-        foto: '/sekretaris.jpg',
+        foto: '/seklur.png',
         motto: 'Tertib administrasi, tertib pelayanan.',
     },
 ]
