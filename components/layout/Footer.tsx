@@ -107,7 +107,7 @@ export default function Footer() {
                     <p className="text-desa-400 text-xs">
                         &copy; {currentYear} Kelurahan Aneka Marga, Kab. Bombana. Hak cipta dilindungi.
                     </p>
-                    <p className="text-desa-500 text-xs">Dibuat dalam rangka Proker KKA UMKendari Kelompok 16 </p>
+                    <p className="text-desa-500 text-xs">KKA REGULER UMK 2026</p>
                 </div>
             </div>
         </footer>
