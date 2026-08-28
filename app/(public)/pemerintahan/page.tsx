@@ -457,57 +457,48 @@ export default async function PemerintahanPage() {
                 </div>
             </section>
 
-            {/* ══ VISI & HUBUNGI ═════════════════════════════════════════ */}
+            {/* ══ HUBUNGI KAMI ═══════════════════════════════════════════ */}
             <section className="py-12 px-4 bg-white">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="rounded-3xl overflow-hidden flex flex-col sm:flex-row shadow-md border border-gray-100">
-                        <div className="relative w-full sm:w-40 h-48 sm:h-auto flex-shrink-0">
-                            <Image src="/hero-desa.png" alt="Kelurahan Aneka Marga" fill className="object-cover" sizes="160px" />
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
-                        </div>
-                        <div className="p-6 flex flex-col justify-center">
-                            <p className="text-xs font-bold text-desa-600 uppercase tracking-widest mb-2">Visi &amp; Misi</p>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Kelurahan Aneka Marga</h3>
-                            <p className="text-sm text-gray-500 leading-relaxed mb-4">
-                                Menghadirkan pelayanan publik yang cepat, transparan, dan berorientasi pada kepentingan warga.
-                            </p>
-                            <ul className="space-y-1.5">
-                                {['Pelayanan Publik Prima', 'Transparansi Administrasi'].map((item) => (
-                                    <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                                        <svg className="w-4 h-4 text-desa-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="relative overflow-hidden rounded-3xl p-6 flex flex-col justify-between shadow-md">
+                <div className="max-w-3xl mx-auto">
+                    <div className="relative overflow-hidden rounded-3xl shadow-md">
                         <div className="absolute inset-0 bg-gradient-to-br from-desa-800 via-desa-700 to-teal-700" />
-                        <div className="relative">
-                            <h3 className="text-lg font-bold text-white mb-2">Hubungi Kami</h3>
-                            <p className="text-white/70 text-sm leading-relaxed mb-6">
+                        <div className="relative p-8">
+                            <h3 className="text-xl font-bold text-white mb-1">Hubungi Kami</h3>
+                            <p className="text-white/60 text-sm mb-8">
                                 Butuh bantuan atau ingin menyampaikan aspirasi? Kami siap melayani.
                             </p>
-                        </div>
-                        <div className="relative space-y-3">
-                            <a href="tel:+6281234567890" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl px-4 py-3 transition-colors">
-                                <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                    </svg>
-                                </div>
-                                <span className="text-sm font-medium text-white">+62 812-3456-7890</span>
-                            </a>
-                            <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
-                                <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {[
+                                    { label: 'Kantor Kelurahan', nomor: '+62 852-4183-7141', href: 'tel:+6285241837141' },
+                                    { label: 'Lurah — Justang Busasa', nomor: '+62 852-4183-7141', href: 'tel:+6285241837141' },
+                                    { label: 'Sekretaris Kelurahan', nomor: '+62 823-4567-8901', href: 'tel:+6282345678901' },
+                                    { label: 'WhatsApp Pengaduan', nomor: '+62 852-4183-7141', href: 'https://wa.me/6285241837141' },
+                                ].map((item) => (
+                                    <a key={item.label} href={item.href}
+                                        className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-2xl px-4 py-3.5 transition-colors group">
+                                        <div className="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p className="text-white/60 text-xs">{item.label}</p>
+                                            <p className="text-white font-semibold text-sm">{item.nomor}</p>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                            <div className="mt-4 flex items-center gap-3 bg-white/10 border border-white/15 rounded-2xl px-4 py-3.5">
+                                <div className="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0">
                                     <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <span className="text-sm font-medium text-white">Jl. Marga Utama No. 01, Aneka Marga</span>
+                                <div>
+                                    <p className="text-white/60 text-xs">Alamat</p>
+                                    <p className="text-white font-semibold text-sm">Jl. Marga Utama No. 01, Kelurahan Aneka Marga</p>
+                                </div>
                             </div>
                         </div>
                     </div>
