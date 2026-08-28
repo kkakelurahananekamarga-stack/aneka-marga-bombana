@@ -63,17 +63,12 @@ export default async function KontakPage() {
                                 </div>
                                 <div>
                                     <p className="text-xs text-desa-600 font-semibold uppercase tracking-wide mb-1">Telepon</p>
-                                    <a
-                                        href={`tel:${contact.telepon}`}
-                                        className="text-gray-800 font-medium hover:text-desa-600 transition-colors"
-                                    >
+                                    <a href={`tel:${contact.telepon}`} className="text-gray-800 font-medium hover:text-desa-600 transition-colors">
                                         {contact.telepon}
                                     </a>
                                 </div>
                             </div>
                         )}
-
-                        {/* Email */}
                         {contact.email && (
                             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex items-start gap-4">
                                 <div className="w-10 h-10 bg-desa-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -83,17 +78,12 @@ export default async function KontakPage() {
                                 </div>
                                 <div>
                                     <p className="text-xs text-desa-600 font-semibold uppercase tracking-wide mb-1">Email</p>
-                                    <a
-                                        href={`mailto:${contact.email}`}
-                                        className="text-gray-800 font-medium hover:text-desa-600 transition-colors break-all"
-                                    >
+                                    <a href={`mailto:${contact.email}`} className="text-gray-800 font-medium hover:text-desa-600 transition-colors break-all">
                                         {contact.email}
                                     </a>
                                 </div>
                             </div>
                         )}
-
-                        {/* Alamat */}
                         {contact.alamat && (
                             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex items-start gap-4">
                                 <div className="w-10 h-10 bg-desa-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -108,8 +98,6 @@ export default async function KontakPage() {
                                 </div>
                             </div>
                         )}
-
-                        {/* Jam Pelayanan */}
                         {contact.jam_pelayanan && (
                             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex items-start gap-4">
                                 <div className="w-10 h-10 bg-desa-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -130,7 +118,37 @@ export default async function KontakPage() {
                     </div>
                 )}
 
-                {/* Google Maps Embed — Lokasi & Batas Wilayah */}
+                {/* Daftar Nomor Telepon */}
+                <div className="relative overflow-hidden rounded-3xl shadow-md mb-8">
+                    <div className="absolute inset-0 bg-gradient-to-br from-desa-800 via-desa-700 to-teal-700" />
+                    <div className="relative p-6 sm:p-8">
+                        <h3 className="text-lg font-bold text-white mb-1">Daftar Nomor Penting</h3>
+                        <p className="text-white/60 text-sm mb-6">Hubungi langsung petugas kelurahan</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {[
+                                { label: 'Kantor Kelurahan', nomor: '+62 852-4183-7141', href: 'tel:+6285241837141' },
+                                { label: 'Lurah — Justang Busasa', nomor: '+62 852-4183-7141', href: 'tel:+6285241837141' },
+                                { label: 'Sekretaris Kelurahan', nomor: '+62 823-4567-8901', href: 'tel:+6282345678901' },
+                                { label: 'WhatsApp Pengaduan', nomor: '+62 852-4183-7141', href: 'https://wa.me/6285241837141' },
+                            ].map((item) => (
+                                <a key={item.label} href={item.href}
+                                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 rounded-2xl px-4 py-3.5 transition-colors">
+                                    <div className="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-white/60 text-xs">{item.label}</p>
+                                        <p className="text-white font-semibold text-sm">{item.nomor}</p>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Google Maps Embed */}
                 <section>
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Lokasi Kelurahan Aneka Marga</h3>
                     <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200" style={{ height: '450px' }}>
