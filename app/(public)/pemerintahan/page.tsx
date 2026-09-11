@@ -509,9 +509,15 @@ function TealCard({ official, number }: { official: Official; number: number }) 
 function SmallCard({ official }: { official: Official }) {
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center text-center hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-desa-300 to-desa-600 flex items-center justify-center ring-2 ring-white shadow">
-                <span className="text-white font-bold text-sm">{getInitials(official.nama)}</span>
-            </div>
+            {official.foto ? (
+                <div className="relative w-12 h-12 rounded-full ring-2 ring-white shadow overflow-hidden">
+                    <Image src={official.foto} alt={official.nama} fill className="object-cover object-top" sizes="48px" />
+                </div>
+            ) : (
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-desa-300 to-desa-600 flex items-center justify-center ring-2 ring-white shadow">
+                    <span className="text-white font-bold text-sm">{getInitials(official.nama)}</span>
+                </div>
+            )}
             <h3 className="mt-2 font-semibold text-gray-800 text-xs leading-snug">{official.nama}</h3>
             <span className="mt-1 text-xs font-bold text-desa-500 bg-desa-50 px-2 py-0.5 rounded-full">{official.jabatan}</span>
         </div>
