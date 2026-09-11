@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { createClient } from '@/lib/supabase/server'
 import type { Official } from '@/types'
 import PimpinanCard from '@/components/public/PimpinanModal'
+import OfficialCard from '@/components/public/OfficialModal'
 
 const dataPimpinan = [
     {
@@ -245,7 +246,7 @@ export default async function PemerintahanPage() {
                     <div className="relative max-w-3xl mx-auto">
                         <SectionHeading title="Kepala Lingkungan" color="teal" />
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {lingkungan.map((l, i) => <TealCard key={l.id} official={l} number={i + 1} />)}
+                            {lingkungan.map((l, i) => <OfficialCard key={l.id} official={l} variant="teal" number={i + 1} />)}
                         </div>
                     </div>
                 </section>
@@ -257,7 +258,7 @@ export default async function PemerintahanPage() {
                     <div className="max-w-4xl mx-auto">
                         <SectionHeading title="Ketua RT" color="green" />
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            {rt.map((r) => <SmallCard key={r.id} official={r} />)}
+                            {rt.map((r) => <OfficialCard key={r.id} official={r} variant="small" />)}
                         </div>
                     </div>
                 </section>
