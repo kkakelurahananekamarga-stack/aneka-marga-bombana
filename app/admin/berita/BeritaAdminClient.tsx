@@ -42,7 +42,7 @@ export default function BeritaAdminClient({ initialData }: { initialData: News[]
         } else {
             const { data, error } = await supabase.from('berita').insert(form).select().single()
             if (!error && data) { setList(l => [data, ...l]); closeForm() }
-            else setMsg('Gagal menyimpan.')
+            else setMsg(`Gagal menyimpan: ${error?.message ?? 'unknown error'}`)
         }
         setSaving(false)
     }
